@@ -1,0 +1,8 @@
+; =============================================================================
+; Mall för kostnadsregistrering
+; =============================================================================
+
+{date} * "{payee}" "{description}"
+    Expenses:{category}                {amount_excl_vat} SEK
+    Liabilities:Skatteskulder:Moms     {vat_amount} SEK
+    Assets:Bank:Företagskonto         -{amount_incl_vat} SEK

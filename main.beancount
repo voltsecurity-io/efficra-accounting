@@ -1,0 +1,47 @@
+; =============================================================================
+; Efficra Consulting KB - Huvudbokföring
+; =============================================================================
+
+option "title" "Efficra Consulting KB"
+option "operating_currency" "SEK"
+
+; Kontoplan enligt BAS 2024 (förenklad)
+; =============================================================================
+
+; TILLGÅNGAR (1xxx)
+2024-01-01 open Assets:Bank:Företagskonto SEK
+2024-01-01 open Assets:Bank:Sparkonto SEK
+2024-01-01 open Assets:Kundfordringar SEK
+2024-01-01 open Assets:Förutbetalda:Kostnader SEK
+
+; SKULDER (2xxx)
+2024-01-01 open Liabilities:Leverantörsskulder SEK
+2024-01-01 open Liabilities:Skatteskulder:Moms SEK
+2024-01-01 open Liabilities:Skatteskulder:Preliminärskatt SEK
+
+; EGET KAPITAL (2xxx)
+2024-01-01 open Equity:Ingående:Balans SEK
+2024-01-01 open Equity:Årets:Resultat SEK
+
+; INTÄKTER (3xxx)
+2024-01-01 open Income:Konsulttjänster SEK
+2024-01-01 open Income:Övrigt SEK
+
+; KOSTNADER (4xxx-8xxx)
+2024-01-01 open Expenses:Kontorsmaterial SEK
+2024-01-01 open Expenses:Representation SEK
+2024-01-01 open Expenses:Resor SEK
+2024-01-01 open Expenses:Telefon:Internet SEK
+2024-01-01 open Expenses:Programvara SEK
+2024-01-01 open Expenses:Bankkostnader SEK
+2024-01-01 open Expenses:Bokföring:Revision SEK
+
+; Ingående balans (exempel)
+; =============================================================================
+2024-01-01 * "Ingående balans"
+    Assets:Bank:Företagskonto         50000.00 SEK
+    Equity:Ingående:Balans           -50000.00 SEK
+
+; =============================================================================
+; Här under läggs transaktioner till automatiskt eller manuellt
+; =============================================================================

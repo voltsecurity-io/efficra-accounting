@@ -1,0 +1,8 @@
+; =============================================================================
+; Mall för fakturaregistrering
+; =============================================================================
+
+{date} * "{payee}" "{description}"
+    Assets:Kundfordringar             {amount_incl_vat} SEK
+    Income:Konsulttjänster           -{amount_excl_vat} SEK
+    Liabilities:Skatteskulder:Moms    -{vat_amount} SEK

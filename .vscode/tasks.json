@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Fava",
+      "type": "shell",
+      "command": "${workspaceFolder}/venv/bin/fava",
+      "args": ["main.beancount"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "${workspaceFolder}/venv/bin/pip",
+      "args": ["install", "-r", "requirements.txt"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Format Python Code",
+      "type": "shell",
+      "command": "${workspaceFolder}/venv/bin/black",
+      "args": ["agents/", "tests/"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint Python Code",
+      "type": "shell",
+      "command": "${workspaceFolder}/venv/bin/flake8",
+      "args": ["agents/", "tests/"],
+      "problemMatcher": []
+    }
+  ]
+}

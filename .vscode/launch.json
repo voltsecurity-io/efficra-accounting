@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Fava Server",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "fava",
+      "args": [
+        "main.beancount",
+        "--port",
+        "5000"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Python: Invoice Processor",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/agents/invoice_processor.py",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}

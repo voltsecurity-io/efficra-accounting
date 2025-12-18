@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.black-formatter",
+    "ms-python.flake8",
+    "ms-python.pylint",
+    "lencerf.beancount",
+    "yzhang.markdown-all-in-one",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github"
+  ]
+}
