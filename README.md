@@ -79,6 +79,64 @@ Systemet använder en förenklad BAS-kontoplan:
 - **3xxx**: Intäkter
 - **4-8xxx**: Kostnader
 
+## 🏦 Revolut Integration (OAuth 2.0 - Production Ready)
+
+Systemet använder **OAuth 2.0** för säker integration med Revolut Business API.
+
+### 🚀 Quick Start (5 minuter)
+
+```bash
+# 1. Installera cryptography-bibliotek
+source venv/bin/activate
+pip install cryptography
+
+# 2. Kör interaktiv OAuth-setup
+python setup_revolut_oauth.py
+```
+
+Scriptet guidar dig genom:
+- Generering av SSL-certifikat
+- Upload till Revolut Business
+- OAuth authorization flow
+- Automatisk token-hantering
+
+### 📋 Detaljerad Guide
+
+Se [ARCHITECTURE.md](ARCHITECTURE.md) för komplett dokumentation om:
+- OAuth 2.0-arkitektur
+- Säkerhets best practices
+- Production deployment
+- AI-Team setup
+- Trading integration (Revolut X)
+
+### 💻 Användning
+
+```bash
+# Testa anslutning
+python agents/revolut_sync_agent.py --test-connection
+
+# Visa balanser
+python agents/revolut_sync_agent.py --show-balances
+
+# Synkronisera transaktioner (senaste 7 dagarna)
+python agents/revolut_sync_agent.py
+
+# Synkronisera 30 dagar bakåt
+python agents/revolut_sync_agent.py --days 30
+
+# Endast transaktioner (hoppa över växlingar)
+python agents/revolut_sync_agent.py --no-exchanges
+```
+
+### Funktioner
+
+- ✅ Automatisk import av transaktioner
+- ✅ Import av valutaväxlingar från Exchange
+- ✅ Visa aktuella balanser i alla valutor
+- ✅ Automatisk kategorisering med AI
+- ✅ Stöd för multi-valuta bokföring
+- ✅ Sandbox-läge för testning
+
 ## 🤖 AI-funktioner (planerade)
 
 - Automatisk OCR av fakturor

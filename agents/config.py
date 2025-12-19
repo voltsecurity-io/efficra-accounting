@@ -22,6 +22,12 @@ class Config:
     OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
     OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
 
+    # Revolut API
+    REVOLUT_BUSINESS_API_KEY = os.getenv("REVOLUT_BUSINESS_API_KEY", "")
+    REVOLUT_SANDBOX = os.getenv("REVOLUT_SANDBOX", "false").lower() == "true"
+    REVOLUT_SYNC_DAYS = int(os.getenv("REVOLUT_SYNC_DAYS", "7"))
+    REVOLUT_AUTO_SYNC = os.getenv("REVOLUT_AUTO_SYNC", "false").lower() == "true"
+
     # Fava
     FAVA_HOST = os.getenv("FAVA_HOST", "0.0.0.0")
     FAVA_PORT = int(os.getenv("FAVA_PORT", "5000"))
